@@ -1,0 +1,23 @@
+Algoritmo Media de la suma de una serie de números positivos
+
+Variables
+	Entero num // La variable donde se almacenará el numero introducido por el usuario
+	Entero suma // La variable donde se ira almacenando la acumulación de los numero introducidos por el usuario
+	Entero counter // La variable donde se almacenará el total de numeros introducidos por el usuario
+	Real media // La variable donde se almacenará la media resultante
+Inicio
+	// Se inicializa las variables suma y contador a 0
+	suma <- 0
+	counter <- 0
+	Leer(num)
+	
+	Mientras(num>0)
+		suma += num // Se realiza la suma
+		counter++ // Se incrementa en 1 el contador
+		Leer(num) // Se le vuelve a pedir al usuario un nuevo numero
+	FinMientras
+	
+	media <- suma / counter // Se realiza la media
+	
+	Escribir(media) // Se imprime por pantalla la media resultante
+Fin
