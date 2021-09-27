@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	unsigned int fecha;
 	int temp, tarotNumber;
 
