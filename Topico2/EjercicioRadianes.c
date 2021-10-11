@@ -1,13 +1,16 @@
 #include <stdio.h>
 
+#define PI 3.14159
+
 int main()
 {
-	int grados;
+	int grados, retornoScanf;
 	double radianes;
-	const double PI = 3.14159;
 
-	printf("Introduzca los grados a pasar a radianes:");
-	scanf("%d", &grados);
+	retornoScanf = scanf("%d", &grados);
+	
+	if(retornoScanf != 1)
+		return 1;
 
 	radianes = (PI / 180) * grados;
 

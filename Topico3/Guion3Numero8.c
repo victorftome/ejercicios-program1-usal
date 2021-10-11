@@ -1,14 +1,15 @@
-// Ejercicio Guion 3 Numero 8
 #include <stdio.h>
 #include <locale.h>
 
 int main()
 {
 	setlocale(LC_ALL, "spanish");
-	int n, unidades, decenas, centenas, millar, invertido, temp;
+	int n, unidades, decenas, centenas, millar, temp, salidaScanf;
 
-	printf("Introduzca un nï¿½mero entero de hasta 4 cifras: ");
-	scanf("%d", &n);
+	salidaScanf = scanf("%d", &n);
+
+	if(salidaScanf != 1 )
+		return 1;
 
 	unidades = n % 10;
 	temp = n / 10;
@@ -21,16 +22,11 @@ int main()
 
 	millar = temp;
 
-	printf("Nï¿½mero introducido......: %d", n);
-	printf("\nUnidades de millar......: %d", millar);
-	printf("\nCentenas................: %d", centenas);
-	printf("\nDecenas.................: %d", decenas);
-	printf("\nUnidades................: %d", unidades);
-
-	invertido = millar + centenas * 10 + decenas * 100 + unidades * 1000;
-
-	printf("\n\nNï¿½mero invertido..........: %d", invertido);
-	printf("\nSuma de ambos.............: %d + %d = %d", n, invertido, n + invertido);
+	printf("Número introducido........: %d", n);
+	printf("\nUnidades de millar........: %d", millar);
+	printf("\nCentenas..................: %d", centenas);
+	printf("\nDecenas...................: %d", decenas);
+	printf("\nUnidades..................: %d", unidades);
 
 	return 0;
 }

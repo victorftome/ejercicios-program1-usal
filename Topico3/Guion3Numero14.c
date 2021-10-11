@@ -5,10 +5,9 @@
 int main()
 {
 	unsigned int fecha;
-	int temp, tarotNumber;
+	int temp, tarotNumber, salidaScanf;
 
-	printf("Introduzca su fecha de nacimiento en formato AAAAMMDD: ");
-	scanf("%d", &fecha);
+	salidaScanf = scanf("%d", &fecha);
 
 	temp = fecha % 100 + fecha / 100 % 100 + fecha / 10000;
 
@@ -16,7 +15,7 @@ int main()
 
 	tarotNumber = (tarotNumber > 9) ? tarotNumber % 10 + tarotNumber / 10 : tarotNumber;
 
-	printf("\nEl numero es: %d", tarotNumber);
+	printf("%d", tarotNumber);
 
 	return 0;
 }

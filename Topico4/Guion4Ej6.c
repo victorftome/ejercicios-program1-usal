@@ -1,25 +1,19 @@
 #include <stdio.h>
 
 int main() {
-	const int MAX_NUM_LENGTH = 10000;
-	
-	int n, i, n_individuales[4];
+	int n, i, n_individuales[4], salidaScanf;
 	char cadena[4];
-	
-	
-	printf("Introduzca un numero de hasta 4 cifras y positivo: ");
-	scanf("%d", &n);
-	
-	if(n >= MAX_NUM_LENGTH || n < 0) {
-		printf("El numero es invalido, tiene q ser un numero de 4 cifras y positivo.\nSaliendo...");
+
+	salidaScanf = scanf("%d", &n);
+
+	if(salidaScanf != 1)
 		return 1;
-	}
 	
 	n_individuales[3] = n % 10;
 	n_individuales[2] = n / 10 % 10;
 	n_individuales[1] = n / 100 % 10;
 	n_individuales[0] = n / 1000;
-	
+
 	for(i = 0; i < (sizeof n_individuales) / (sizeof i); i++) {
 		switch(n_individuales[i]) {
 			case 9:
@@ -55,7 +49,7 @@ int main() {
 		}
 	}
 	
-	printf("El valor codificado es: %s", cadena);
+	printf("%s", cadena);
 	
 	return 0;
 }
