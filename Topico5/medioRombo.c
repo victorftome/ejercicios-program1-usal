@@ -1,28 +1,29 @@
 #include <stdio.h>
 
 int main(){
-	int n, i, j;
-	char c;
+	int n, i, j, salidaScanf;
+
+	salidaScanf = scanf("%d", &n);
 	
-	printf("Introduzca la altura y el caracter a usar: ");
-	scanf("%d %c", &n, &c);
+	if(salidaScanf != 1)
+		return 1;
 
-	for(i = 0; i < n; i++) {
-		for(j = 0; j <= i; j++)
-			printf("%c", c);
-
-		for(j = 0; j <= n - 1; j++)
+	for(i = 1; i <= n; i++) {
+		for(j = 1; j <= n - i; j++)
 			printf(" ");
+
+		for(j = 1; j <= i; j++)
+			printf("*");
 			
 		printf("\n");
 	}
-	
-	for(i = n; i >= 0; i--) {
-		for(j = 0; j <= i; j++)
-			printf("%c", c);
 
-		for(j = 0; j <= n - 1; j++)
+	for(i = n - 1; i > 0; i--) {
+		for(j = 1; j <= n - i; j++)
 			printf(" ");
+
+		for(j = 1; j <= i; j++)
+			printf("*");
 			
 		printf("\n");
 	}
