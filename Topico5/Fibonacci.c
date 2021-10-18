@@ -1,24 +1,22 @@
 #include <stdio.h>
 
 int main() {
-	int m;
-	unsigned int aux = 0, aux2 = 1, i;
-	unsigned long n_fibonacci = 1;
+	int m, i, salidaScanf;
+	unsigned int aux = 0, aux2 = 1;
+	unsigned long n_fibonacci = 0;
 	
-	printf("Introduzca el numero POSITIVO entre 1 y 50: ");
-	scanf("%d", &m);
+	salidaScanf = scanf("%d", &m);
 	
-	if(m < 1 || m > 50) {
-		printf("Numero entre 1 y 50\nSaliendo...");
+	if(salidaScanf != 1)
 		return 1;
-	}
 	
-	for(i = 1; i <= m; i++) {
-		printf("%ld ", n_fibonacci);
-		n_fibonacci = aux + aux2;
+	for(i = 0; i < m; i++) {
 		aux = aux2;
 		aux2 = n_fibonacci;
+		n_fibonacci = aux + aux2;
 	}
+	
+	printf("%ld", n_fibonacci);
 
 	return 0;
 }
