@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 int main(){
-	int n, i, j;
+	int n, i, j, salidaScanf;
 	char interior, exterior;
 
-	printf("Introduzca el caracter exterior e interior: ");
-	scanf("%c %c", &exterior, &interior);
+	salidaScanf = scanf("%c\n%c\n%d", &interior, &exterior, &n);
 	
-	printf("Introduzca la altura: ");
-	scanf("%d", &n);
+	if(salidaScanf != 3)
+		return 1;
 
-	for(i = 0; i <= n; i++) {
+	for(i = 0; i < n; i++) {
 		for(j = 1; j <= n - i; j++)
 			printf(" ");
 
@@ -38,7 +37,7 @@ int main(){
 	
 	printf("\n");
 	
-	for(i = 0; i <= n; i++) {
+	for(i = 0; i < n; i++) {
 		for(j = 1; j <= n - i; j++)
 			printf("%c", exterior);
 
@@ -66,7 +65,7 @@ int main(){
 	
 	printf("\n");
 	
-	for(i = 0; i <= n; i++) {
+	for(i = 0; i < n; i++) {
 		for(j = 1; j <= n - i; j++)
 			printf("%c", exterior);
 

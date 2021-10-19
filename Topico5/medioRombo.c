@@ -1,30 +1,33 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
 	int n, i, j, salidaScanf;
 
 	salidaScanf = scanf("%d", &n);
-	
-	if(salidaScanf != 1)
+
+	if (salidaScanf != 1)
 		return 1;
 
-	for(i = 1; i <= n; i++) {
-		for(j = 1; j <= n - i; j++)
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= n - i; j++)
 			printf(" ");
 
-		for(j = 1; j <= i; j++)
+		for (j = 1; j <= i; j++)
 			printf("*");
-			
+
 		printf("\n");
 	}
 
-	for(i = n - 1; i > 0; i--) {
-		for(j = 1; j <= n - i; j++)
+	for (i = n - 1; i > 0; i--)
+	{
+		for (j = 1; j <= n - i; j++)
 			printf(" ");
 
-		for(j = 1; j <= i; j++)
+		for (j = 1; j <= i; j++)
 			printf("*");
-			
+
 		printf("\n");
 	}
 
