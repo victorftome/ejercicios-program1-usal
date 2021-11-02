@@ -34,8 +34,7 @@ int main()
 
 		scanf(" %c", &opcion);
 
-		while (getchar() != '\n')
-			; // Limpiamos el buffer para evitar errores a la hora de que el usuario pueda introducir cadenas como "dabcs"
+		while (getchar() != '\n'); // Limpiamos el buffer para evitar errores a la hora de que el usuario pueda introducir cadenas como "dabcs"
 
 		switch (toupper(opcion))
 		{
